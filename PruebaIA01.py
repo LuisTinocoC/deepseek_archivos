@@ -127,7 +127,7 @@ def main():
 
         # Enviar el prompt a DeepSeek usando Ollama
         print(Modelo)
-        comando = ["ollama", "run", "deepseek-r1:1.5b"]
+        comando = ["ollama", "run", Modelo]
         resultado = subprocess.run(comando, input=file_template, capture_output=True, text=True, encoding='utf-8')
 
         # Respuesta
